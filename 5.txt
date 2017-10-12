@@ -1,8 +1,10 @@
-﻿JMP asdf 
-DB 5 
-asdf: 
-mov a, 5 
-mov b, a 
+﻿jmp start 
+RAM:
+db 4 
+start: 
+mov c, RAM 
+mov a,[c]
+mov b, [c] 
 qwer: 
 DEC B 
 MUL B 
