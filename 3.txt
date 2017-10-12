@@ -1,0 +1,7 @@
+﻿JMP qwerty 
+DB 4 
+DB 12 
+qwerty: 
+MOV A, 4 
+MOV B, 12 
+ADD A, B 
