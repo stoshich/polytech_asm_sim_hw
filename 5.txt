@@ -1,0 +1,10 @@
+﻿JMP asdf 
+DB 5 
+asdf: 
+mov a, 5 
+mov b, a 
+qwer: 
+DEC B 
+MUL B 
+CMP B,1 
+JNE qwer
