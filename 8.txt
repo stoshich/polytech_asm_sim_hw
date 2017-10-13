@@ -1,0 +1,74 @@
+﻿JMP konig 
+intro: 
+DB "1" 
+DB "6" 
+DB "7" 
+DB "4" 
+DB "2" 
+DB "8" 
+DB 0 
+konig: 
+MOV D, 232 
+MOV C, intro 
+MOV A, [C] 
+MOV [D], A 
+
+
+cmpmaster: 
+cmp A, 0 
+JE stop 
+CMP A, [C+1] 
+JZ stop 
+JA print1 
+JB print2 
+
+
+print1: 
+inc C 
+MOV A, [C] 
+JMP cmpmaster 
+
+print2: 
+MOV A, [C+1] 
+MOV [D], A 
+inc C 
+MOV A, [C] 
+JMP cmpmaster 
+
+stop: 
+hlt
+
+DB "1" 
+DB "6" 
+DB "7" 
+DB "4" 
+DB "2" 
+DB "8" 
+DB 0 
+konig: 
+MOV D, 232 
+MOV C, intro 
+MOV A, [C] 
+MOV [D], A 
+
+
+cmpmaster: 
+cmp A, 0 
+JE stop 
+CMP A, [C+1] 
+JA print1 
+JB print2 
+
+
+print2: 
+inc C 
+JMP cmpmaster 
+
+print1: 
+MOV [D], A 
+inc C 
+MOV A, [C] 
+JMP cmpmaster 
+
+stop: 
+hlt
